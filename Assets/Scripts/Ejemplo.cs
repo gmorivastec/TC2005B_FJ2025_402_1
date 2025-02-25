@@ -30,6 +30,7 @@ public class Ejemplo : MonoBehaviour
     // real time - 30 fps
     // ideal - 60 fps +
     // update va a correr tantas veces pueda
+    // el framerate es variable
     // Update is called once per frame
     void Update()
     {
