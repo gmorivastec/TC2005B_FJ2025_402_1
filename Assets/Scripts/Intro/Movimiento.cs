@@ -1,4 +1,6 @@
 using UnityEngine;
+using TMPro;
+using UnityEngine.Assertions;
 
 public class Movimiento : MonoBehaviour
 {
@@ -9,10 +11,18 @@ public class Movimiento : MonoBehaviour
     [SerializeField]
     private float _speed = 5;
 
+
+    [SerializeField]
+    private TMP_Text _textito;
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        Assert.IsNotNull(_textito, "TEXTITO NO PUEDE SER NULO");
+
+
     }
 
     // Update is called once per frame
@@ -105,6 +115,8 @@ public class Movimiento : MonoBehaviour
     void OnTriggerEnter(Collider c)
     {
         print("TRIGGER ENTER");
+        _textito.text = "AY CHOQUE!";
+
     }
 
     void OnTriggerStay(Collider c)
